@@ -24,5 +24,5 @@
 | 20 | 2026-03-26 | SentiLink | Go-To-Market (GTM) Engineer | — | Rejected | ❌ | — | Rejection email found |
 | 21 | 2026-03-23 | Cresta | GTM Engineer | — | Applied | ❌ | — | Greenhouse confirmation found |
 | 22 | 2026-03-23 | DroneDeploy | Account Executive (USA) | — | Applied | ❌ | — | Lever confirmation found |
-| 23 | 2026-03-23 | Mento | GTM Engineer | — | Applied | ❌ | — | Greenhouse confirmation found |
+| 23 | 2026-03-23 | Mento | GTM Engineer | 2.7/5 | Applied | ❌ | 003-mento-2026-04-06.md | Strong adjacent interest, but wrong role depth |
 | 24 | 2026-03-23 | SentiLink | Unknown | — | Applied | ❌ | — | Ashby confirmation found |
