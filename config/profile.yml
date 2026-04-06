@@ -1,12 +1,11 @@
-# Job-Finder Candidate Profile — first draft for Kody
-# This is an initial working draft based on known context and should be refined.
+# Job-Finder Candidate Profile — Kody Walker
 
 candidate:
   full_name: "Kody Walker"
-  email: ""
-  phone: ""
+  email: "kodywalker1987@gmail.com"
+  phone: "+1-512-900-9950"
   location: "Austin, TX"
-  linkedin: ""
+  linkedin: "linkedin.com/in/kodywalker"
   portfolio_url: ""
   github: "github.com/wonwalker3"
 
@@ -29,19 +28,21 @@ role_targets:
   secondary:
     - "Revenue / Ops Systems"
     - "Business Operator with Technical Leverage"
+    - "AI-forward commercial roles"
   avoid:
-    - "Pure quota-carrying sales"
+    - "Pure quota-carrying sales with no systems/product angle"
     - "Narrow deep-specialist engineering roles with obvious hard-skill gaps"
     - "Low-autonomy corporate process roles"
 
 narrative:
-  headline: "Operator-builder using systems, automation, and AI to create leverage"
-  exit_story: "Looking for work where execution, systems thinking, product judgment, and practical AI/automation matter more than theater."
+  headline: "Top-producing sales operator and franchise owner using systems, automation, and AI to create leverage"
+  exit_story: "Looking for work where execution, customer judgment, systems thinking, and practical AI/automation matter more than posturing."
   differentiators:
-    - "Moves fast and figures things out"
+    - "13+ years of full-cycle consultative sales"
+    - "Top producer with long-cycle, multi-stakeholder deal experience"
+    - "Business owner with real P&L responsibility"
+    - "Uses AI and automation in practical day-to-day work"
     - "Comfortable across business, systems, product, and execution"
-    - "Uses automation and AI to simplify messy workflows"
-    - "High-agency operator, not just a planner"
   proof_points:
     - name: "Finance Tracker"
       url: "https://finance.kodywalker.com"
@@ -49,6 +50,9 @@ narrative:
     - name: "Inventory V5"
       url: "https://inventory-v5-preview.pages.dev"
       hero_metric: "Shipped a real inventory system iteration"
+    - name: "Home sales performance"
+      url: ""
+      hero_metric: "#1 in Austin division for units sold and total revenue"
 
 compensation:
   target_range: "$140K-$220K"
