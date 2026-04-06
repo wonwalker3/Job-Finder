@@ -1,16 +1,14 @@
 # Job Pipeline
 
 ## Pending
-- [ ] https://job-boards.greenhouse.io/airtable/jobs/8403058002 | Airtable | Account Executive, Commercial | Austin commercial AE follow-up (manual/browser fetch needed; public scrape hit EEO wall)
-- [ ] https://job-boards.greenhouse.io/airtable/jobs/8403107002 | Airtable | Account Executive, Mid Market | Austin mid-market AE follow-up (manual/browser fetch needed; public scrape hit EEO wall)
-- [ ] https://job-boards.greenhouse.io/airtable/jobs/8403054002 | Airtable | Account Executive, Emerging Small Business | Austin SMB AE follow-up (manual/browser fetch needed; public scrape hit EEO wall)
+- None. Current pipeline batch complete.
 
 ## Notes
 - First-wave calibration is complete.
-- Second-wave batch is complete except Airtable, which needs browser/manual fetch because Greenhouse is returning the EEO survey wall instead of the JD.
-- Prioritize: proptech, implementation/customer-facing delivery, AI-commercial AE, then selective mid-market SaaS.
+- Second-wave batch is complete.
+- Current strongest lanes: proptech / real-estate-adjacent tech, customer-facing implementation / customer success, AI-commercial AE, then realistic SMB/commercial SaaS.
 - Avoid technical solutions engineering, GTM engineering, and senior SaaS prestige-bait.
-- Dead links should be moved to processed immediately instead of lingering in pending.
+- Refresh future batches around the proven winning lane rather than broad generic SaaS search.
 
 ## Processed
 - [x] #001 | Luxury Presence | Account Executive (Austin, TX) | 4.6/5 | Strong Apply
@@ -28,6 +26,9 @@
 - [x] #013 | AWL | Account Executive I | 3.3/5 | Selective / Maybe
 - [x] #014 | Grafana Labs | Commercial Account Executive, Acquisition | 3.1/5 | Skip
 - [x] #015 | Upwork | Marketplace Account Executive | 4.0/5 | Apply
+- [x] #016 | Airtable | Account Executive, Commercial | 3.8/5 | Selective / Maybe
+- [x] #017 | Airtable | Account Executive, Emerging Small Business | 4.0/5 | Apply
+- [x] #018 | Airtable | Account Executive, Mid Market | 3.2/5 | Skip
 - [x] Dead link | Findigs | SMB Account Executive | 404 / closed or removed
 - [x] Dead link | Lone Wolf Technologies | Account Executive | 404 / closed or removed
 - [x] Dead link | Articulate | Commercial Account Executive | 404 / closed or removed
