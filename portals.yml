@@ -5,10 +5,15 @@
 # - HubSpot SMB AE: 3.8/5
 # - Mento GTM Engineer: 2.7/5
 #
+# Additional user constraint:
+# - senior SaaS roles are usually low-probability and should be deprioritized
+# - prioritize realistic commercial / mid-market / solutions / operator lanes
+#
 # Meaning:
 # - favor customer-facing commercial roles with technical leverage
 # - favor proptech / AI-forward commercial / solutions roles
 # - avoid roles that are really GTM engineering / RevOps builder jobs in disguise
+# - avoid chasing senior-title SaaS roles just for prestige
 #
 # Company targeting is split into practical tiers:
 # - Tier 1: highest-fit / priority targets
@@ -20,8 +25,7 @@ title_filter:
     - "Account Executive"
     - "Commercial Account Executive"
     - "Mid-Market Account Executive"
-    - "Strategic Account Executive"
-    - "Enterprise Account Executive"
+    - "Commercial"
     - "Solutions Engineer"
     - "Solutions Consultant"
     - "Solutions Architect"
@@ -68,40 +72,47 @@ title_filter:
     - "Web3"
     - "Crypto"
     - "Salesforce Admin"
-  seniority_boost:
-    - "Senior"
-    - "Lead"
+    - "Senior Account Executive"
+    - "Sr. Account Executive"
+    - "Sr Account Executive"
+    - "Enterprise Account Executive"
+    - "Strategic Account Executive"
     - "Principal"
-    - "Head"
-    - "Director"
+    - "Head of"
+    - "VP"
+  seniority_boost:
+    - "Mid-Market"
+    - "Commercial"
+    - "Account Executive"
+    - "Solutions"
 
 search_queries:
-  - name: Austin proptech / real-estate tech
-    query: 'Austin ("proptech" OR "real estate software") ("Account Executive" OR Solutions OR Implementation)'
+  - name: Austin proptech / real-estate tech (targeted)
+    query: 'site:jobs.lever.co OR site:job-boards.greenhouse.io OR site:jobs.ashbyhq.com Austin ("Account Executive" OR Solutions OR Implementation) ("real estate" OR proptech OR brokerage)'
     enabled: true
 
-  - name: Texas AI-forward commercial roles
-    query: 'Texas ("AI" OR automation) ("Account Executive" OR "Solutions Engineer" OR Implementation)'
+  - name: Texas AI-forward commercial roles (targeted)
+    query: 'site:jobs.lever.co OR site:job-boards.greenhouse.io OR site:jobs.ashbyhq.com (Texas OR Remote) ("Account Executive" OR "Solutions Engineer" OR Implementation) ("AI" OR automation)'
     enabled: true
 
-  - name: Remote SaaS AE with customer/process fit
-    query: 'site:jobs.ashbyhq.com OR site:job-boards.greenhouse.io OR site:jobs.lever.co "Account Executive" "consultative" Salesforce remote'
+  - name: Remote commercial / mid-market SaaS AE
+    query: 'site:jobs.ashbyhq.com OR site:job-boards.greenhouse.io OR site:jobs.lever.co ("Commercial Account Executive" OR "Mid-Market Account Executive" OR "Account Executive") consultative Salesforce remote -"Senior Account Executive" -"Enterprise Account Executive" -"Strategic Account Executive"'
     enabled: true
 
   - name: Remote solutions / implementation roles
-    query: 'site:jobs.ashbyhq.com OR site:job-boards.greenhouse.io OR site:jobs.lever.co "Solutions Engineer" OR "Implementation Manager" OR "Customer Engineer" remote'
+    query: 'site:jobs.ashbyhq.com OR site:job-boards.greenhouse.io OR site:jobs.lever.co ("Solutions Engineer" OR "Implementation Manager" OR "Customer Engineer") remote'
     enabled: true
 
   - name: AI commercial / product-adjacent roles
     query: 'site:jobs.ashbyhq.com OR site:job-boards.greenhouse.io OR site:jobs.lever.co "AI" (commercial OR solutions OR "product specialist") remote'
     enabled: true
 
-  - name: Austin / Texas SaaS AEs
-    query: '(Austin OR Texas) ("Account Executive" OR "Mid-Market" OR "Enterprise Account Executive") SaaS'
+  - name: Austin / Texas realistic SaaS AE roles
+    query: '(Austin OR Texas) ("Commercial Account Executive" OR "Mid-Market Account Executive" OR "Account Executive") SaaS -"Senior Account Executive" -"Enterprise Account Executive" -"Strategic Account Executive"'
     enabled: true
 
   - name: Austin hybrid commercial tech roles
-    query: '(Austin OR Round Rock) ("Account Executive" OR Solutions OR Implementation OR Partnerships) (software OR platform OR AI)'
+    query: 'site:jobs.lever.co OR site:job-boards.greenhouse.io OR site:jobs.ashbyhq.com (Austin OR Round Rock) ("Account Executive" OR Solutions OR Implementation OR Partnerships) (software OR platform OR AI)'
     enabled: true
 
 tracked_companies:
@@ -117,42 +128,42 @@ tracked_companies:
     tier: 1
     careers_url: https://www.buildops.com/careers/
     scan_method: websearch
-    scan_query: 'site:buildops.com/careers "Account Executive" OR "Solutions"'
+    scan_query: 'site:buildops.com/careers ("Account Executive" OR "Commercial" OR "Solutions") -"Senior Account Executive"'
     enabled: true
 
   - name: Gong
     tier: 1
     careers_url: https://www.gong.io/careers
     scan_method: websearch
-    scan_query: 'site:gong.io/careers "Account Executive" OR "Solutions" OR "AI"'
+    scan_query: 'site:gong.io/careers ("Account Executive" OR "Commercial" OR "Solutions" OR "AI") -"Senior Account Executive" -"Enterprise Account Executive"'
     enabled: true
 
   - name: Dialpad
     tier: 1
     careers_url: https://www.dialpad.com/careers/open-opportunities/
     scan_method: websearch
-    scan_query: 'site:dialpad.com/careers/open-opportunities "Account Executive" OR "Sales Engineer"'
+    scan_query: 'site:dialpad.com/careers/open-opportunities ("Account Executive" OR "Mid-Market" OR "Sales Engineer") -"Senior Account Executive" -"Enterprise Account Executive"'
     enabled: true
 
   - name: HubSpot
     tier: 1
     careers_url: https://www.hubspot.com/careers/jobs/all
     scan_method: websearch
-    scan_query: 'site:hubspot.com/careers/jobs "Account Executive" OR "Solutions" OR "Customer Success"'
+    scan_query: 'site:hubspot.com/careers/jobs ("Account Executive" OR "Customer Success" OR "Solutions") -"Senior Account Executive" -"Enterprise Account Executive"'
     enabled: true
 
   - name: Retool
     tier: 1
     careers_url: https://retool.com/careers
     scan_method: websearch
-    scan_query: 'site:retool.com/careers "Solutions" OR "Commercial" OR "AI" OR "Product"'
+    scan_query: 'site:retool.com/careers ("Solutions" OR "Commercial" OR "AI" OR "Product") -Principal -Head -VP'
     enabled: true
 
   - name: Clay
     tier: 1
     careers_url: https://jobs.ashbyhq.com/clay
     scan_method: websearch
-    scan_query: 'site:jobs.ashbyhq.com/clay "Account Executive" OR "Commercial" OR "Partnerships"'
+    scan_query: 'site:jobs.ashbyhq.com/clay ("Account Executive" OR "Commercial" OR "Partnerships") -"Senior Account Executive" -"Strategic Account Executive"'
     enabled: true
 
   - name: Airtable
@@ -165,42 +176,42 @@ tracked_companies:
     tier: 1
     careers_url: https://jobs.ashbyhq.com/zapier
     scan_method: websearch
-    scan_query: 'site:jobs.ashbyhq.com/zapier "Account Executive" OR "Solutions" OR "Partnerships"'
+    scan_query: 'site:jobs.ashbyhq.com/zapier ("Account Executive" OR "Solutions" OR "Partnerships") -"Senior Account Executive"'
     enabled: true
 
   - name: n8n
     tier: 1
     careers_url: https://jobs.ashbyhq.com/n8n
     scan_method: websearch
-    scan_query: 'site:jobs.ashbyhq.com/n8n "Account Executive" OR "Partnerships" OR "Solutions"'
+    scan_query: 'site:jobs.ashbyhq.com/n8n ("Account Executive" OR "Partnerships" OR "Solutions") -"Senior Account Executive"'
     enabled: true
 
   - name: Rippling
     tier: 1
     careers_url: https://www.rippling.com/careers/open-roles
     scan_method: websearch
-    scan_query: 'site:rippling.com/careers/open-roles "Account Executive" OR "Implementation" OR "Solutions"'
+    scan_query: 'site:rippling.com/careers/open-roles ("Account Executive" OR "Implementation" OR "Solutions") -"Senior Account Executive" -"Enterprise Account Executive"'
     enabled: true
 
   - name: Ramp
     tier: 1
     careers_url: https://jobs.ashbyhq.com/ramp
     scan_method: websearch
-    scan_query: 'site:jobs.ashbyhq.com/ramp "Account Executive" OR "Partnerships" OR "Solutions"'
+    scan_query: 'site:jobs.ashbyhq.com/ramp ("Account Executive" OR "Partnerships" OR "Solutions") -"Senior Account Executive" -"Enterprise Account Executive"'
     enabled: true
 
   - name: Deel
     tier: 1
     careers_url: https://jobs.ashbyhq.com/deel
     scan_method: websearch
-    scan_query: 'site:jobs.ashbyhq.com/deel "Account Executive" OR "Implementation" OR "Solutions"'
+    scan_query: 'site:jobs.ashbyhq.com/deel ("Account Executive" OR "Implementation" OR "Solutions") -"Senior Account Executive" -"Enterprise Account Executive"'
     enabled: true
 
   - name: Notion
     tier: 1
     careers_url: https://www.notion.so/careers
     scan_method: websearch
-    scan_query: 'site:notion.so/careers "Account Executive" OR "Commercial" OR "Solutions"'
+    scan_query: 'site:notion.so/careers ("Account Executive" OR "Commercial" OR "Solutions") -"Senior Account Executive" -"Strategic Account Executive"'
     enabled: true
 
   - name: Glean
@@ -213,14 +224,14 @@ tracked_companies:
     tier: 1
     careers_url: https://webflow.com/careers
     scan_method: websearch
-    scan_query: 'site:webflow.com/careers "Account Executive" OR "Sales" OR "Solutions"'
+    scan_query: 'site:webflow.com/careers ("Account Executive" OR "Sales" OR "Solutions") -"Senior Account Executive"'
     enabled: true
 
   - name: OpenAI
     tier: 1
     careers_url: https://openai.com/careers
     scan_method: websearch
-    scan_query: 'site:openai.com/careers "commercial" OR "partnerships" OR "solutions" OR "go to market"'
+    scan_query: 'site:openai.com/careers (commercial OR partnerships OR solutions OR "go to market") -Principal -Head -VP'
     enabled: true
 
   - name: Anthropic
@@ -234,147 +245,147 @@ tracked_companies:
     tier: 2
     careers_url: https://careers.salesforce.com
     scan_method: websearch
-    scan_query: 'site:careers.salesforce.com Austin OR Texas "Account Executive" OR "Solution Engineer" OR "Agentforce"'
+    scan_query: 'site:careers.salesforce.com Austin OR Texas ("Account Executive" OR "Solution Engineer" OR "Agentforce") -"Senior Account Executive" -"Enterprise Account Executive"'
     enabled: true
 
   - name: Twilio
     tier: 2
     careers_url: https://www.twilio.com/en-us/company/jobs
     scan_method: websearch
-    scan_query: 'site:twilio.com/company/jobs Austin OR Texas "Account Executive" OR "Solutions" OR "AI"'
+    scan_query: 'site:twilio.com/company/jobs Austin OR Texas ("Account Executive" OR "Solutions" OR "AI") -"Senior Account Executive" -"Enterprise Account Executive"'
     enabled: true
 
   - name: NinjaOne
     tier: 2
     careers_url: https://www.ninjaone.com/careers/
     scan_method: websearch
-    scan_query: 'site:ninjaone.com/careers Austin OR Texas "Account Executive" OR "Sales" OR "Solutions"'
+    scan_query: 'site:ninjaone.com/careers Austin OR Texas ("Account Executive" OR "Sales" OR "Solutions") -"Senior Account Executive"'
     enabled: true
 
   - name: SailPoint
     tier: 2
     careers_url: https://www.sailpoint.com/company/careers
     scan_method: websearch
-    scan_query: 'site:sailpoint.com/company/careers Austin OR Texas "Account Executive" OR "AI" OR "Solutions"'
+    scan_query: 'site:sailpoint.com/company/careers Austin OR Texas ("Account Executive" OR "AI" OR "Solutions") -"Senior Account Executive" -"Enterprise Account Executive"'
     enabled: true
 
   - name: WP Engine
     tier: 2
     careers_url: https://wpengine.careers/
     scan_method: websearch
-    scan_query: 'site:wpengine.careers Austin OR Texas "Account Executive" OR "Sales" OR "Solutions"'
+    scan_query: 'site:wpengine.careers Austin OR Texas ("Account Executive" OR "Sales" OR "Solutions") -"Senior Account Executive"'
     enabled: true
 
   - name: Bazaarvoice
     tier: 2
     careers_url: https://www.bazaarvoice.com/company/careers/
     scan_method: websearch
-    scan_query: 'site:bazaarvoice.com/company/careers Austin OR Texas "Account Executive" OR "Commercial"'
+    scan_query: 'site:bazaarvoice.com/company/careers Austin OR Texas ("Account Executive" OR "Commercial") -"Senior Account Executive" -"Enterprise Account Executive"'
     enabled: true
 
   - name: Q2
     tier: 2
     careers_url: https://careers.q2.com/
     scan_method: websearch
-    scan_query: 'site:careers.q2.com Austin OR Texas "Account Executive" OR "Solutions" OR "Implementation"'
+    scan_query: 'site:careers.q2.com Austin OR Texas ("Account Executive" OR "Solutions" OR "Implementation") -"Senior Account Executive"'
     enabled: true
 
   - name: Yext
     tier: 2
     careers_url: https://www.yext.com/careers
     scan_method: websearch
-    scan_query: 'site:yext.com/careers Austin OR Texas "Account Executive" OR "Solutions"'
+    scan_query: 'site:yext.com/careers Austin OR Texas ("Account Executive" OR "Solutions") -"Senior Account Executive"'
     enabled: true
 
   - name: Samsara
     tier: 2
     careers_url: https://www.samsara.com/company/careers/
     scan_method: websearch
-    scan_query: 'site:samsara.com/company/careers Austin OR Texas "Account Executive" OR "Commercial"'
+    scan_query: 'site:samsara.com/company/careers Austin OR Texas ("Account Executive" OR "Commercial") -"Senior Account Executive" -"Strategic Account Executive"'
     enabled: true
 
   - name: Cloudflare
     tier: 2
     careers_url: https://www.cloudflare.com/careers/jobs/
     scan_method: websearch
-    scan_query: 'site:cloudflare.com/careers/jobs Austin OR Texas "Account Executive" OR "BDR" OR "Solutions"'
+    scan_query: 'site:cloudflare.com/careers/jobs Austin OR Texas ("Account Executive" OR "Solutions") -"Senior Account Executive" -BDR'
     enabled: true
 
   - name: Verkada
     tier: 2
     careers_url: https://www.verkada.com/careers/open-roles/
     scan_method: websearch
-    scan_query: 'site:verkada.com/careers/open-roles Austin OR Texas "Account Executive" OR "Sales"'
+    scan_query: 'site:verkada.com/careers/open-roles Austin OR Texas ("Account Executive" OR "Sales") -"Senior Account Executive"'
     enabled: true
 
   - name: Files.com
     tier: 2
     careers_url: https://www.files.com/jobs
     scan_method: websearch
-    scan_query: 'site:files.com/jobs Austin OR Texas "Account Executive" OR "Sales"'
+    scan_query: 'site:files.com/jobs Austin OR Texas ("Account Executive" OR "Sales") -"Senior Account Executive"'
     enabled: true
 
   - name: Oracle
     tier: 2
     careers_url: https://careers.oracle.com/
     scan_method: websearch
-    scan_query: 'site:careers.oracle.com Austin OR Texas "Account Executive" OR "Applications Sales" OR "Cloud"'
+    scan_query: 'site:careers.oracle.com Austin OR Texas ("Applications Sales" OR "Account Executive" OR "Cloud") -"Senior Account Executive" -VP'
     enabled: true
 
   - name: Dell
     tier: 2
     careers_url: https://jobs.dell.com/
     scan_method: websearch
-    scan_query: 'site:jobs.dell.com Round Rock OR Austin "Account Executive" OR "Sales" OR "Business Development"'
+    scan_query: 'site:jobs.dell.com Round Rock OR Austin ("Account Executive" OR "Sales" OR "Business Development") -"Senior Account Executive" -VP'
     enabled: true
 
   - name: Google Cloud
     tier: 2
     careers_url: https://www.google.com/about/careers/applications/jobs/results/
     scan_method: websearch
-    scan_query: 'site:google.com/about/careers/applications/jobs/results Austin OR Texas "Account Executive" OR "Sales" OR "Customer Engineer"'
+    scan_query: 'site:google.com/about/careers/applications/jobs/results Austin OR Texas ("Sales" OR "Customer Engineer") -Senior -Principal -Director'
     enabled: true
 
   - name: Postman
     tier: 2
     careers_url: https://www.postman.com/company/careers/
     scan_method: websearch
-    scan_query: 'site:postman.com/company/careers Austin OR Texas "Account Executive" OR "Commercial" OR "Solutions"'
+    scan_query: 'site:postman.com/company/careers Austin OR Texas ("Account Executive" OR "Commercial" OR "Solutions") -"Senior Account Executive"'
     enabled: true
 
   - name: Braze
     tier: 2
     careers_url: https://www.braze.com/company/careers
     scan_method: websearch
-    scan_query: 'site:braze.com/company/careers Austin OR Texas "Account Executive" OR "Commercial"'
+    scan_query: 'site:braze.com/company/careers Austin OR Texas ("Account Executive" OR "Commercial") -"Senior Account Executive"'
     enabled: true
 
   - name: Qualtrics
     tier: 2
     careers_url: https://www.qualtrics.com/careers/us/en
     scan_method: websearch
-    scan_query: 'site:qualtrics.com/careers Austin OR Texas "Account Executive" OR "Sales" OR "Solutions"'
+    scan_query: 'site:qualtrics.com/careers Austin OR Texas ("Account Executive" OR "Sales" OR "Solutions") -"Senior Account Executive"'
     enabled: true
 
   - name: Udemy
     tier: 2
     careers_url: https://about.udemy.com/careers/
     scan_method: websearch
-    scan_query: 'site:about.udemy.com/careers Austin OR Texas "Account Executive" OR "Commercial"'
+    scan_query: 'site:about.udemy.com/careers Austin OR Texas ("Account Executive" OR "Commercial") -"Senior Account Executive"'
     enabled: true
 
   - name: Buildkite
     tier: 2
     careers_url: https://buildkite.com/careers
     scan_method: websearch
-    scan_query: 'site:buildkite.com/careers Austin OR Texas "Account Executive" OR "Partnerships" OR "Solutions"'
+    scan_query: 'site:buildkite.com/careers Austin OR Texas ("Account Executive" OR "Partnerships" OR "Solutions") -Senior -Principal'
     enabled: true
 
   - name: Deepgram
     tier: 2
     careers_url: https://deepgram.com/company/careers
     scan_method: websearch
-    scan_query: 'site:deepgram.com/company/careers Austin OR Texas "Account Executive" OR "Strategic" OR "AI"'
+    scan_query: 'site:deepgram.com/company/careers Austin OR Texas ("Account Executive" OR "AI" OR "Strategic") -"Senior Account Executive" -"Strategic Account Executive"'
     enabled: true
 
   # Tier 3 — remote national targets
@@ -388,110 +399,110 @@ tracked_companies:
     tier: 3
     careers_url: https://www.box.com/careers/open-positions
     scan_method: websearch
-    scan_query: 'site:box.com/careers/open-positions "Account Executive" OR "Solutions"'
+    scan_query: 'site:box.com/careers/open-positions ("Account Executive" OR "Solutions") -"Senior Account Executive"'
     enabled: true
 
   - name: Plaid
     tier: 3
     careers_url: https://plaid.com/careers/
     scan_method: websearch
-    scan_query: 'site:plaid.com/careers "Account Executive" OR "Commercial" OR "Partnerships"'
+    scan_query: 'site:plaid.com/careers ("Account Executive" OR "Commercial" OR "Partnerships") -"Senior Account Executive" -"Enterprise Account Executive"'
     enabled: true
 
   - name: Zoom
     tier: 3
     careers_url: https://careers.zoom.us/home
     scan_method: websearch
-    scan_query: 'site:careers.zoom.us "Account Executive" OR "Sales" OR "Solutions"'
+    scan_query: 'site:careers.zoom.us ("Account Executive" OR "Sales" OR "Solutions") -"Senior Account Executive" -"Enterprise Account Executive"'
     enabled: true
 
   - name: GitLab
     tier: 3
     careers_url: https://about.gitlab.com/jobs/
     scan_method: websearch
-    scan_query: 'site:about.gitlab.com/jobs "Account Executive" OR "Commercial" OR "All-Remote"'
+    scan_query: 'site:about.gitlab.com/jobs ("Account Executive" OR "Commercial" OR "All-Remote") -"Senior Account Executive" -"Enterprise Account Executive"'
     enabled: true
 
   - name: Asana
     tier: 3
     careers_url: https://asana.com/jobs/all
     scan_method: websearch
-    scan_query: 'site:asana.com/jobs/all "Account Executive" OR "Solutions"'
+    scan_query: 'site:asana.com/jobs/all ("Account Executive" OR "Solutions") -"Senior Account Executive"'
     enabled: true
 
   - name: Monday.com
     tier: 3
     careers_url: https://monday.com/careers
     scan_method: websearch
-    scan_query: 'site:monday.com/careers "Account Executive" OR "Commercial" OR "Solutions"'
+    scan_query: 'site:monday.com/careers ("Account Executive" OR "Commercial" OR "Solutions") -"Senior Account Executive"'
     enabled: true
 
   - name: Atlassian
     tier: 3
     careers_url: https://www.atlassian.com/company/careers/all-jobs
     scan_method: websearch
-    scan_query: 'site:atlassian.com/company/careers/all-jobs "Account Executive" OR "Commercial" OR "Solutions"'
+    scan_query: 'site:atlassian.com/company/careers/all-jobs ("Commercial" OR "Sales" OR "Customer Success") -Senior -Principal -Director'
     enabled: true
 
   - name: Miro
     tier: 3
     careers_url: https://miro.com/careers/open-positions/
     scan_method: websearch
-    scan_query: 'site:miro.com/careers/open-positions "Account Executive" OR "Solutions"'
+    scan_query: 'site:miro.com/careers/open-positions ("Account Executive" OR "Solutions") -"Senior Account Executive"'
     enabled: true
 
   - name: ClickUp
     tier: 3
     careers_url: https://clickup.com/careers
     scan_method: websearch
-    scan_query: 'site:clickup.com/careers "Account Executive" OR "Commercial" OR "Partnerships"'
+    scan_query: 'site:clickup.com/careers ("Account Executive" OR "Commercial" OR "Partnerships") -"Senior Account Executive"'
     enabled: true
 
   - name: Figma
     tier: 3
     careers_url: https://www.figma.com/careers/
     scan_method: websearch
-    scan_query: 'site:figma.com/careers "Account Executive" OR "Commercial" OR "Solutions"'
+    scan_query: 'site:figma.com/careers ("Account Executive" OR "Commercial" OR "Solutions") -"Senior Account Executive"'
     enabled: true
 
   - name: Mural
     tier: 3
     careers_url: https://www.mural.co/careers
     scan_method: websearch
-    scan_query: 'site:mural.co/careers "Account Executive" OR "Commercial" OR "Solutions"'
+    scan_query: 'site:mural.co/careers ("Account Executive" OR "Commercial" OR "Solutions") -"Senior Account Executive"'
     enabled: true
 
   - name: 1Password
     tier: 3
     careers_url: https://jobs.ashbyhq.com/1password
     scan_method: websearch
-    scan_query: 'site:jobs.ashbyhq.com/1password "Account Executive" OR "Commercial" OR "Solutions"'
+    scan_query: 'site:jobs.ashbyhq.com/1password ("Account Executive" OR "Commercial" OR "Solutions") -"Senior Account Executive"'
     enabled: true
 
   - name: Okta
     tier: 3
     careers_url: https://www.okta.com/company/careers/
     scan_method: websearch
-    scan_query: 'site:okta.com/company/careers "Account Executive" OR "Commercial" OR "Solutions"'
+    scan_query: 'site:okta.com/company/careers ("Account Executive" OR "Commercial" OR "Solutions") -"Senior Account Executive" -"Enterprise Account Executive"'
     enabled: true
 
   - name: Datadog
     tier: 3
     careers_url: https://careers.datadoghq.com/
     scan_method: websearch
-    scan_query: 'site:careers.datadoghq.com "Account Executive" OR "Commercial" OR "Sales"'
+    scan_query: 'site:careers.datadoghq.com ("Commercial" OR "Mid-Market" OR "Sales") -Senior -Principal -Director'
     enabled: true
 
   - name: Snowflake
     tier: 3
     careers_url: https://careers.snowflake.com/us/en
     scan_method: websearch
-    scan_query: 'site:careers.snowflake.com/us/en "Account Executive" OR "Commercial" OR "Solutions"'
+    scan_query: 'site:careers.snowflake.com/us/en ("Commercial" OR "Mid-Market" OR "Sales") -Senior -Principal -Director'
     enabled: true
 
   - name: MongoDB
     tier: 3
     careers_url: https://www.mongodb.com/company/careers
     scan_method: websearch
-    scan_query: 'site:mongodb.com/company/careers "Account Executive" OR "Commercial" OR "Solutions"'
+    scan_query: 'site:mongodb.com/company/careers ("Commercial" OR "Mid-Market" OR "Sales") -Senior -Principal -Director'
     enabled: true
