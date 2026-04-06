@@ -1,8 +1,6 @@
 # Job Pipeline
 
 ## Pending
-- [ ] https://jobs.lever.co/lwolf/d83b7c93-e919-4722-bdb5-a1b45388b793 | Lone Wolf Technologies | Account Executive | brokerage / real-estate software fit
-- [ ] https://job-boards.greenhouse.io/gleanwork/jobs/4603423005 | Glean | Solutions Engineer - Commercial (Texas) | AI-forward commercial signal, needs realism check
 - [ ] https://jobs.ashbyhq.com/Hamming%20AI/f1f15202-f00e-4d67-9216-d742c567ebbb | Hamming AI | Account Executive | Austin/remote AI commercial lane
 - [ ] https://jobs.lever.co/articulate/5d030bbf-e4b8-4000-9a7c-2b69120013d0 | Articulate | Commercial Account Executive | remote commercial SaaS benchmark
 - [ ] https://job-boards.greenhouse.io/gofundme/jobs/7398335 | GoFundMe | Account Executive, Commercial | remote commercial benchmark
@@ -20,4 +18,6 @@
 - [x] #002 | HubSpot | Account Executive - Small Business | 3.8/5 | Selective / Maybe
 - [x] #003 | Mento | GTM Engineer | 2.7/5 | Skip
 - [x] #004 | Qualia | Implementation Manager, Mid-Market | 4.1/5 | Apply
+- [x] #005 | Glean | Commercial Solutions Engineer | 2.9/5 | Skip
 - [x] Dead link | Findigs | SMB Account Executive | 404 / closed or removed
+- [x] Dead link | Lone Wolf Technologies | Account Executive | 404 / closed or removed
