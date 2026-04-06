@@ -1,12 +1,12 @@
 # Job Pipeline
 
 ## Pending
-- [ ] https://job-boards.greenhouse.io/gofundme/jobs/7398335 | GoFundMe | Account Executive, Commercial | remote commercial benchmark
-- [ ] https://jobs.lever.co/prismic/3387202d-22e3-4d9b-9f36-c3e7d2d00d4b | Prismic | Account Executive | consultative remote SaaS benchmark
+- None. First-wave pipeline complete.
 
 ## Notes
-- Priority order should favor: domain fit, realistic commercial fit, then selective SaaS benchmarks.
-- Do not force deeply technical solutions roles just because they mention AI.
+- First-wave calibration is complete.
+- Next pipeline batches should prioritize: proptech, implementation/customer-facing delivery, AI-commercial AE, then selective mid-market SaaS.
+- Avoid technical solutions engineering, GTM engineering, and senior SaaS prestige-bait.
 - Dead links should be moved to processed immediately instead of lingering in pending.
 
 ## Processed
@@ -18,6 +18,8 @@
 - [x] #006 | Hamming AI | Account Executive | 4.0/5 | Apply
 - [x] #007 | Loop | Mid-Market Account Executive | 3.9/5 | Selective / Maybe
 - [x] #008 | Supermove | AI Solutions Engineer | 2.4/5 | Skip
+- [x] #009 | GoFundMe Pro | Account Executive, Commercial | 3.7/5 | Selective / Maybe
+- [x] #010 | Prismic | Account Executive | 3.5/5 | Skip (location mismatch)
 - [x] Dead link | Findigs | SMB Account Executive | 404 / closed or removed
 - [x] Dead link | Lone Wolf Technologies | Account Executive | 404 / closed or removed
 - [x] Dead link | Articulate | Commercial Account Executive | 404 / closed or removed
