@@ -1,0 +1,191 @@
+# Job-Finder Active Scanner Configuration
+# This is the live scanner config.
+# Retuned after the first calibration set:
+# - Luxury Presence AE: 4.6/5
+# - HubSpot SMB AE: 3.8/5
+# - Mento GTM Engineer: 2.7/5
+#
+# Meaning:
+# - favor customer-facing commercial roles with technical leverage
+# - favor proptech / AI-forward commercial / solutions roles
+# - avoid roles that are really GTM engineering / RevOps builder jobs in disguise
+
+title_filter:
+  positive:
+    - "Account Executive"
+    - "Commercial Account Executive"
+    - "Mid-Market Account Executive"
+    - "Strategic Account Executive"
+    - "Solutions Engineer"
+    - "Solutions Consultant"
+    - "Solutions Architect"
+    - "Implementation Manager"
+    - "Customer Engineer"
+    - "Partnerships"
+    - "Business Development"
+    - "Product Specialist"
+    - "AI"
+    - "Automation"
+    - "Applied AI"
+    - "AI Product"
+    - "AI Solutions"
+    - "PropTech"
+    - "Revenue Operations"
+    - "Business Systems"
+    - "Internal Tools"
+  negative:
+    - "Junior"
+    - "Intern"
+    - "SDR"
+    - "BDR"
+    - "Sales Development Representative"
+    - "Account Development Representative"
+    - "RevOps Engineer"
+    - "Growth Engineer"
+    - "GTM Engineer"
+    - "Revenue Engineer"
+    - "SQL"
+    - "API"
+    - "Webhooks"
+    - "Data Engineer"
+    - "Software Engineer"
+    - "Full Stack"
+    - "Backend"
+    - ".NET"
+    - "Java "
+    - "iOS"
+    - "Android"
+    - "Embedded"
+    - "Firmware"
+    - "Blockchain"
+    - "Web3"
+    - "Crypto"
+    - "Salesforce Admin"
+  seniority_boost:
+    - "Senior"
+    - "Lead"
+    - "Principal"
+    - "Head"
+    - "Director"
+
+search_queries:
+  - name: Proptech / real-estate tech AEs
+    query: '"proptech" OR "real estate software" "Account Executive" OR "Solutions" remote OR Austin'
+    enabled: true
+
+  - name: AI-forward commercial roles
+    query: '"AI" OR "automation" "Account Executive" OR "Solutions Engineer" OR "Implementation" remote'
+    enabled: true
+
+  - name: SaaS AE with customer/process fit
+    query: 'site:jobs.ashbyhq.com OR site:job-boards.greenhouse.io OR site:jobs.lever.co "Account Executive" "consultative" Salesforce remote'
+    enabled: true
+
+  - name: Solutions / implementation roles
+    query: 'site:jobs.ashbyhq.com OR site:job-boards.greenhouse.io OR site:jobs.lever.co "Solutions Engineer" OR "Implementation Manager" OR "Customer Engineer" remote'
+    enabled: true
+
+  - name: AI commercial / product-adjacent roles
+    query: 'site:jobs.ashbyhq.com OR site:job-boards.greenhouse.io OR site:jobs.lever.co "AI" "commercial" OR "solutions" OR "product specialist" remote'
+    enabled: true
+
+tracked_companies:
+  - name: Luxury Presence
+    careers_url: https://jobs.lever.co/luxurypresence
+    scan_method: websearch
+    scan_query: 'site:jobs.lever.co/luxurypresence OR site:luxurypresence.com/careers'
+    enabled: true
+
+  - name: HubSpot
+    careers_url: https://www.hubspot.com/careers/jobs/all
+    scan_method: websearch
+    scan_query: 'site:hubspot.com/careers/jobs "Account Executive" OR "Solutions" OR "Customer Success"'
+    enabled: true
+
+  - name: Dialpad
+    careers_url: https://www.dialpad.com/careers/open-opportunities/
+    scan_method: websearch
+    scan_query: 'site:dialpad.com/careers/open-opportunities "Account Executive" OR "Sales Engineer"'
+    enabled: true
+
+  - name: Gong
+    careers_url: https://www.gong.io/careers
+    scan_method: websearch
+    scan_query: 'site:gong.io/careers "Account Executive" OR "Solutions" OR "AI"'
+    enabled: true
+
+  - name: Salesforce
+    careers_url: https://careers.salesforce.com
+    scan_method: websearch
+    scan_query: 'site:careers.salesforce.com "Account Executive" OR "Solution Engineer" OR "Agentforce"'
+    enabled: true
+
+  - name: Twilio
+    careers_url: https://www.twilio.com/en-us/company/jobs
+    scan_method: websearch
+    scan_query: 'site:twilio.com/company/jobs "Account Executive" OR "Solutions" OR "AI"'
+    enabled: true
+
+  - name: Retool
+    careers_url: https://retool.com/careers
+    scan_method: websearch
+    scan_query: 'site:retool.com/careers "Solutions" OR "Commercial" OR "AI" OR "Product"'
+    enabled: true
+
+  - name: Airtable
+    careers_url: https://job-boards.greenhouse.io/airtable
+    api: https://boards-api.greenhouse.io/v1/boards/airtable/jobs
+    enabled: true
+
+  - name: Zapier
+    careers_url: https://jobs.ashbyhq.com/zapier
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/zapier "Account Executive" OR "Solutions" OR "Partnerships"'
+    enabled: true
+
+  - name: n8n
+    careers_url: https://jobs.ashbyhq.com/n8n
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/n8n "Account Executive" OR "Partnerships" OR "Solutions"'
+    enabled: true
+
+  - name: Clay
+    careers_url: https://jobs.ashbyhq.com/clay
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/clay "Account Executive" OR "Commercial" OR "Partnerships"'
+    enabled: true
+
+  - name: Rippling
+    careers_url: https://www.rippling.com/careers/open-roles
+    scan_method: websearch
+    scan_query: 'site:rippling.com/careers/open-roles "Account Executive" OR "Implementation" OR "Solutions"'
+    enabled: true
+
+  - name: Ramp
+    careers_url: https://jobs.ashbyhq.com/ramp
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/ramp "Account Executive" OR "Partnerships" OR "Solutions"'
+    enabled: true
+
+  - name: Deel
+    careers_url: https://jobs.ashbyhq.com/deel
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/deel "Account Executive" OR "Implementation" OR "Solutions"'
+    enabled: true
+
+  - name: Notion
+    careers_url: https://www.notion.so/careers
+    scan_method: websearch
+    scan_query: 'site:notion.so/careers "Account Executive" OR "Commercial" OR "Solutions"'
+    enabled: true
+
+  - name: OpenAI
+    careers_url: https://openai.com/careers
+    scan_method: websearch
+    scan_query: 'site:openai.com/careers "commercial" OR "partnerships" OR "solutions" OR "go to market"'
+    enabled: true
+
+  - name: Anthropic
+    careers_url: https://job-boards.greenhouse.io/anthropic
+    api: https://boards-api.greenhouse.io/v1/boards/anthropic/jobs
+    enabled: true
