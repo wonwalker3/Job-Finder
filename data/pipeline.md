@@ -1,13 +1,18 @@
 # Job Pipeline
 
 ## Pending
-- None. First-wave pipeline complete.
+- [ ] https://job-boards.greenhouse.io/qualia/jobs/7643692 | Qualia | Customer Success Manager, Enterprise | real-estate ecosystem / customer-facing expansion lane
+- [ ] https://job-boards.greenhouse.io/qualia/jobs/2588304?ref=opentoworkremote.com | Qualia | Customer Success Manager, SMB | real-estate ecosystem / SMB customer-success lane
+- [ ] https://job-boards.greenhouse.io/airtable/jobs/8422910002 | Airtable | Scaled Customer Success Manager | Austin AI/customer-success lane
+- [ ] https://job-boards.greenhouse.io/allwebleads/jobs/4884723002 | AWL | Account Executive I | realistic commercial AE benchmark
+- [ ] https://job-boards.greenhouse.io/grafanalabs/jobs/5811292004 | Grafana Labs | Commercial Account Executive, Acquisition | Texas remote commercial benchmark
+- [ ] https://job-boards.greenhouse.io/upwork/jobs/7629807003 | Upwork | Marketplace Account Executive | consultative remote commercial benchmark
 
 ## Notes
-- First-wave calibration is complete.
-- Next pipeline batches should prioritize: proptech, implementation/customer-facing delivery, AI-commercial AE, then selective mid-market SaaS.
-- Avoid technical solutions engineering, GTM engineering, and senior SaaS prestige-bait.
-- Dead links should be moved to processed immediately instead of lingering in pending.
+- Second-wave pipeline is seeded from calibrated winning lanes, not generic broad search.
+- Prioritize domain-fit and customer-facing operational roles first.
+- Be skeptical of anything that drifts back toward technical implementation depth or prestige-title SaaS bait.
+- If a role turns out to be dead or geographically misaligned, flush it fast.
 
 ## Processed
 - [x] #001 | Luxury Presence | Account Executive (Austin, TX) | 4.6/5 | Strong Apply
