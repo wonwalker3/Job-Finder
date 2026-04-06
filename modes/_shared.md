@@ -14,31 +14,71 @@ Always read these before evaluating any role:
 
 Rules:
 - Never invent metrics.
-- Prefer `article-digest.md` for detailed metrics if it conflicts with older summary text in `cv.md`.
+- Prefer `article-digest.md` for detailed positioning if it conflicts with older summary text in `cv.md`.
 - Do not mutate the candidate’s factual background to fit a role.
+
+---
+
+## What the first evaluations taught us
+
+Current calibration from real evaluated roles:
+
+- **Luxury Presence AE** → 4.6/5
+- **HubSpot SMB AE** → 3.8/5
+- **Mento GTM Engineer** → 2.7/5
+
+Interpretation:
+- strongest in customer-facing commercial roles with strong domain fit and practical technical leverage
+- still plausible in some mainstream SaaS AE roles, but with more friction
+- weak fit for roles that primarily want a true GTM systems / RevOps / growth engineering builder
+
+This should influence scoring and targeting everywhere else.
 
 ---
 
 ## North Star role families
 
-This fork is being adapted for a practical, flexible search rather than one narrow AI-founder narrative.
-
 Evaluate opportunities across these role families unless the candidate profile says otherwise:
 
-| Role family | What the company is buying |
-|-------------|-----------------------------|
-| **Applied AI / Automation Builder** | Someone who can turn AI/automation ideas into working systems and real workflows |
-| **Technical Product / AI Product** | Someone who can translate business needs into product decisions, tools, and shipped outcomes |
-| **Solutions / Implementation / Customer-Facing Technical** | Someone who can bridge clients, systems, demos, integrations, and delivery |
-| **Revenue / Operations Systems Builder** | Someone who can improve GTM, RevOps, internal tools, process automation, and reporting |
-| **Business Operator with Technical Leverage** | Someone who can own outcomes, move fast, and use systems/AI/tools to increase throughput |
-| **Adjacent Stretch Role** | A role slightly outside the core background but still sellable with a credible narrative |
+| Role family | Priority | What the company is buying |
+|-------------|----------|-----------------------------|
+| **AI-forward commercial role** | High | Seller/operator who can talk to customers, drive revenue, and use AI/tooling intelligently |
+| **Solutions / implementation / customer-facing technical** | High | Someone who can bridge customers, systems, demos, onboarding, and delivery |
+| **Proptech / real-estate-adjacent technology role** | High | Domain-fluent closer/operator who already understands agents, brokerages, referral businesses, or real-estate customer motion |
+| **Technical product / AI product (light-to-moderate technical depth)** | Medium | Someone who can translate business/customer needs into systems, workflows, or product outcomes |
+| **Revenue / operations systems role** | Medium-low | Only when the role is closer to operator judgment and workflow ownership than true RevOps engineering |
+| **Pure GTM engineer / growth engineering / RevOps builder** | Low | Usually a miss unless the JD is unusually forgiving and not actually asking for real systems-depth |
 
-The candidate does not need a single rigid title target. The system should optimize for:
-- believable fit
-- compensation sanity
-- strong story alignment
-- actual willingness to do the work
+---
+
+## Strong-fit signals
+
+Favor roles with these traits:
+
+- customer-facing and commercially accountable
+- consultative selling or solution discovery
+- multi-stakeholder sales motion
+- CRM / pipeline discipline matters
+- practical operator judgment matters
+- industry/domain knowledge helps
+- AI or modern tooling fluency is a plus, not the whole job
+- relationship building and business trust matter
+
+These are the kinds of roles where the candidate's story becomes stronger, not weaker.
+
+---
+
+## Weak-fit signals
+
+Penalize roles with these traits:
+
+- explicit requirement for 3–5+ years in GTM Ops / RevOps / Growth Engineering
+- direct demand for SQL, APIs, webhooks, data pipelines, or heavy systems integration depth
+- role is really an internal systems-builder position wearing a GTM label
+- role assumes prior production ownership of enrichment pipelines, routing logic, or revenue-engine architecture
+- role is closer to software engineer / solutions architect / deep technical builder than commercial operator
+
+The candidate may be adjacent or interested. Adjacent is not the same as competitive.
 
 ---
 
@@ -46,12 +86,12 @@ The candidate does not need a single rigid title target. The system should optim
 
 | If the role is... | Emphasize... |
 |-------------------|--------------|
-| Applied AI / Automation Builder | shipping, workflows, operational leverage, experimentation, tool-building |
-| Technical Product / AI Product | prioritization, customer insight, business translation, product judgment |
-| Solutions / Implementation | communication, translation, demos, implementation speed, trust-building |
-| Revenue / Ops Systems | systems thinking, process cleanup, automation ROI, visibility, execution |
-| Business Operator | ownership, judgment, initiative, moving things forward without bureaucracy |
-| Adjacent Stretch | transferable wins, adjacent credibility, fast learning, realistic gap handling |
+| AI-forward commercial role | consultative selling, customer judgment, modern tooling, pipeline discipline, practical AI leverage |
+| Solutions / implementation | communication, translation, systems thinking, onboarding, customer trust, fast learning |
+| Proptech / real-estate-adjacent | domain credibility, agent/broker understanding, referral networks, business-owner empathy |
+| Technical product / AI product | prioritization, workflow design, user understanding, systems judgment, cross-functional thinking |
+| Revenue / ops systems | process cleanup, operator mindset, automation instincts, CRM discipline — but only if the role is not too technical |
+| Pure GTM engineer | usually a warning case; do not force the fit |
 
 ---
 
@@ -60,48 +100,53 @@ The candidate does not need a single rigid title target. The system should optim
 Use the candidate’s profile narrative from `config/profile.yml`.
 
 Default frame for this fork:
-- practical builder
-- business-minded
-- technical enough to ship and automate
-- not a buzzword tourist
-- someone who can create leverage, not just produce slides
+- top-producing sales operator
+- business owner with real accountability
+- practical builder who uses systems, automation, and AI for leverage
+- strong customer judgment
+- not an engineer, not pretending to be one
 
-The system should make the candidate sound:
+The candidate should sound:
 - credible
 - direct
 - useful
+- modern
 - high-agency
 
 Not like:
+- a fake SaaS veteran
+- a fake engineer
 - a generic corporate resume generator
-- a fake founder myth machine
 - someone inflating into roles they clearly cannot do
 
 ---
 
 ## Scoring priorities
 
-Use a 1–5 score, but the score must be grounded in reality.
+Use a 1–5 score grounded in reality.
 
 ### Core dimensions
 
 | Dimension | What to check |
 |-----------|----------------|
-| Core fit | Does the background actually line up with the real job? |
-| Story fit | Can the candidate explain why this role makes sense? |
-| Compensation fit | Is the comp likely in range? |
-| Work-style fit | Remote/hybrid/travel expectations realistic? |
-| Credibility of proof | Are there concrete examples to back up the pitch? |
-| Risk level | Are there fatal gaps or just normal stretch areas? |
+| Core fit | Does the background line up with the actual job? |
+| Story fit | Can the candidate explain why this move makes sense? |
+| Commercial fit | Does the role value selling, customer judgment, and pipeline ownership? |
+| Tooling fit | Is modern CRM / AI / workflow fluency enough, or does the role demand deeper systems skill? |
+| Domain fit | Does industry/customer familiarity help materially? |
+| Risk level | Are the gaps manageable, or does the JD want a fundamentally different person? |
 
-### Score guidance
+### Scoring guidance
 
 - **4.5–5.0** → strong apply
 - **4.0–4.4** → good apply
-- **3.2–3.9** → maybe / selective apply
+- **3.2–3.9** → selective / maybe
 - **below 3.2** → usually skip
 
-A score should not just flatter the candidate. It should help decide where effort belongs.
+Important:
+- Do not award a high score just because the role mentions AI.
+- Do not award a high score just because the candidate likes automation.
+- A commercial operator role with AI/tooling upside is different from a real GTM engineering role.
 
 ---
 
@@ -110,9 +155,9 @@ A score should not just flatter the candidate. It should help decide where effor
 When generating tailored resume output:
 - use truthful keyword alignment only
 - reorder and reframe existing experience; do not fabricate
-- prioritize what would matter in a 6-second scan
+- prioritize what matters in a 6-second scan
+- translate domain-specific sales experience into broadly legible business outcomes when needed
 - pull real proof from `cv.md` and `article-digest.md`
-- keep language clean, direct, and recruiter-readable
 
 If the job is weak or the fit is poor, say so instead of forcing a tailored PDF unless explicitly requested.
 
@@ -133,6 +178,7 @@ Not allowed by default:
 - submitting applications without review
 - inventing answers
 - overstating qualifications
+- bluffing technical depth to force a role fit
 
 ---
 
@@ -145,6 +191,7 @@ Rules:
 2. Existing status/notes updates may edit the tracker directly when appropriate.
 3. Every report should include `**URL:**` in the header.
 4. Use canonical states from `templates/states.yml`.
+5. When a role scores below 3.2, note clearly why so future review does not waste time repeating the same mistake.
 
 ---
 
