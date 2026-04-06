@@ -4,7 +4,7 @@
 |---|------|---------|------|-------|--------|-----|--------|-------|
 | 1 | 2026-04-01 | Dialpad | Account Executive, Mid-Market | — | Applied | ❌ | — | Gmail confirmation found |
 | 2 | 2026-04-01 | Agora | Account Executive - Texas | — | Applied | ❌ | — | Gmail confirmation found |
-| 3 | 2026-04-01 | Luxury Presence | Account Executive (Austin, TX) | — | Applied | ❌ | — | Gmail confirmation found |
+| 3 | 2026-04-01 | Luxury Presence | Account Executive (Austin, TX) | 4.6/5 | Applied | ❌ | 001-luxury-presence-2026-04-06.md | Strong domain fit; first evaluated role |
 | 4 | 2026-03-30 | Obsidian Security | Unknown | — | Applied | ❌ | — | Greenhouse confirmation found |
 | 5 | 2026-03-30 | Amazon | Account Executive, ComSec COM - Field | — | Applied | ❌ | — | Amazon confirmation found |
 | 6 | 2026-03-30 | CrowdStrike | Partner Account Executive | — | Applied | ❌ | — | Workday confirmation found |
