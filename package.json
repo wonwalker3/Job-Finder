@@ -1,7 +1,7 @@
 {
-  "name": "career-ops",
+  "name": "job-finder",
   "version": "1.0.0",
-  "description": "AI-powered job search pipeline built on Claude Code",
+  "description": "AI-powered job search pipeline adapted for Codex/OpenClaw",
   "scripts": {
     "verify": "node verify-pipeline.mjs",
     "normalize": "node normalize-statuses.mjs",
@@ -10,12 +10,12 @@
     "pdf": "node generate-pdf.mjs",
     "sync-check": "node cv-sync-check.mjs"
   },
-  "keywords": ["ai", "job-search", "claude-code", "career", "automation"],
+  "keywords": ["ai", "job-search", "codex", "openclaw", "career", "automation"],
   "author": "Santiago Fernández de Valderrama <hi@santifer.io> (https://santifer.io)",
-  "homepage": "https://santifer.io",
+  "homepage": "https://github.com/wonwalker3/Job-Finder",
   "repository": {
     "type": "git",
-    "url": "https://github.com/santifer/career-ops"
+    "url": "https://github.com/wonwalker3/Job-Finder"
   },
   "license": "MIT",
   "dependencies": {
