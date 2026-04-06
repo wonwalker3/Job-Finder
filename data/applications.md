@@ -16,7 +16,7 @@
 | 12 | 2026-03-30 | Plaid | Account Executive - SMB | — | Applied | ❌ | — | Lever confirmation found |
 | 13 | 2026-03-30 | Zillow | Strategic Account Executive | — | Applied | ❌ | — | Workday confirmation found |
 | 14 | 2026-03-30 | Zoom | Account Executive - MM VAST | — | Applied | ❌ | — | Workday confirmation found |
-| 15 | 2026-03-30 | HubSpot | Account Executive - Small Business | — | Applied | ❌ | — | Confirmation found |
+| 15 | 2026-03-30 | HubSpot | Account Executive - Small Business | 3.8/5 | Applied | ❌ | 002-hubspot-2026-04-06.md | Good SaaS benchmark, but weaker fit than Luxury Presence |
 | 16 | 2026-03-30 | Cisco-Eagle | Account Executive | — | Applied | ❌ | — | Confirmation found |
 | 17 | 2026-03-30 | GitLab | New Business Account Executive - West | — | Applied | ❌ | — | Greenhouse confirmation found |
 | 18 | 2026-03-29 | Cloudflare | Business Development Representative (BDR) | — | Applied | ❌ | — | Confirmation found |
