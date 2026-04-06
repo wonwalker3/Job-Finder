@@ -1,17 +1,23 @@
-# Career-Ops — Canonical States
-# Source of truth for career-ops (writer) and dashboard (reader).
-# Both systems MUST use these exact states.
-#
-# Rule: The status field in applications.md must contain EXACTLY
-# one of these values (case-insensitive). No markdown bold (**),
-# no dates, no extra text. Dates go in the date column.
+# Job-Finder — Canonical States
+# Source of truth for tracker-writing flows and dashboard consumers.
+# Status field rules:
+# - one canonical state only
+# - no markdown
+# - no dates
+# - no extra commentary in the state field
 
 states:
   - id: evaluated
     label: Evaluated
     aliases: [evaluada]
-    description: Offer evaluated with report, pending decision
+    description: Role reviewed, report created, pending decision
     dashboard_group: evaluated
+
+  - id: apply-next
+    label: Apply Next
+    aliases: [apply_next, apply-next, ready_to_apply]
+    description: Strong target, should be prioritized for application work
+    dashboard_group: apply-next
 
   - id: applied
     label: Applied
@@ -22,7 +28,7 @@ states:
   - id: responded
     label: Responded
     aliases: [respondido]
-    description: Company has responded (not yet interview)
+    description: Company replied, not yet formal interview stage
     dashboard_group: responded
 
   - id: interview
@@ -46,11 +52,11 @@ states:
   - id: discarded
     label: Discarded
     aliases: [descartado, descartada, cerrada, cancelada]
-    description: Discarded by candidate or offer closed
+    description: Discarded by candidate or role closed
     dashboard_group: discarded
 
   - id: skip
-    label: SKIP
+    label: Skip
     aliases: [no_aplicar, no aplicar, skip, monitor]
-    description: Doesn't fit, don't apply
+    description: Not a role worth applying to
     dashboard_group: skip

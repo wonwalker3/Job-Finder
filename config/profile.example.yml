@@ -1,67 +1,63 @@
-# Career-Ops Profile Configuration
-# Copy this file to config/profile.yml and fill in your details.
-# This is the single source of truth for your personal data across all modes.
+# Job-Finder Candidate Profile
+# Copy this file to config/profile.yml and fill in the real details.
+# This is the main source of truth for candidate identity, targets, and compensation.
 
 candidate:
-  full_name: "Jane Smith"
-  email: "jane@example.com"
-  phone: "+1-555-0123"
-  location: "San Francisco, CA"
-  linkedin: "linkedin.com/in/janesmith"
-  portfolio_url: "https://janesmith.dev"
-  github: "github.com/janesmith"
-  twitter: "https://x.com/janesmith"
+  full_name: "Your Name"
+  email: "you@example.com"
+  phone: "+1-555-555-5555"
+  location: "Austin, TX"
+  linkedin: "linkedin.com/in/yourprofile"
+  portfolio_url: "https://your-site.com"
+  github: "github.com/yourhandle"
 
-target_roles:
-  # Your North Star roles — what you're optimizing for
+search:
+  status: "active"
+  urgency: "normal"           # low | normal | high
+  preferred_regions:
+    - "United States"
+  work_preferences:
+    remote: true
+    hybrid: true
+    onsite: false
+    travel_ok: "limited"
+
+role_targets:
   primary:
-    - "Senior AI Engineer"
-    - "Staff ML Engineer"
-  # Archetypes help the evaluation system score fit
-  archetypes:
-    - name: "AI/ML Engineer"
-      level: "Senior/Staff"
-      fit: "primary"        # primary = dream role, secondary = good fit, adjacent = stretch
-    - name: "AI Product Manager"
-      level: "Senior"
-      fit: "secondary"
-    - name: "Solutions Architect"
-      level: "Mid-Senior"
-      fit: "adjacent"
+    - "Applied AI / Automation"
+    - "Technical Product / AI Product"
+    - "Solutions / Implementation"
+  secondary:
+    - "Revenue / Ops Systems"
+    - "Business Operator with Technical Leverage"
+  avoid:
+    - "Pure quota-carrying sales"
+    - "Deep specialist engineering roles with obvious hard-skill gaps"
 
 narrative:
-  # Your professional headline (1 line)
-  headline: "ML Engineer turned AI product builder"
-  # Your exit story — what makes you unique
-  exit_story: "Built and sold my SaaS after 5 years. Now focused on applied AI at scale."
-  # Your top 3-5 superpowers
-  superpowers:
-    - "End-to-end ML pipelines"
-    - "Fast prototyping (idea to prod in 2 weeks)"
-    - "Cross-functional communication"
-  # Proof points — projects, articles, case studies with measurable impact
+  headline: "Operator-builder who uses systems, automation, and AI to create leverage"
+  exit_story: "Looking for roles where practical execution, systems thinking, and technical leverage matter more than posturing."
+  differentiators:
+    - "Moves fast and ships useful things"
+    - "Comfortable across business, product, and systems"
+    - "Can turn messy process into cleaner execution"
   proof_points:
-    - name: "Project Alpha"
-      url: "https://janesmith.dev/project-alpha"
-      hero_metric: "Reduced inference latency 40%"
-    - name: "Open Source Tool"
-      url: "https://github.com/janesmith/tool"
-      hero_metric: "2K+ GitHub stars"
-  # Optional: dashboard/demo URL with credentials
-  # dashboard:
-  #   url: "https://janesmith.dev/demo"
-  #   password: "demo-2026"
+    - name: "Project / Win #1"
+      url: "https://example.com/proof-1"
+      hero_metric: "Quantified outcome here"
+    - name: "Project / Win #2"
+      url: "https://example.com/proof-2"
+      hero_metric: "Quantified outcome here"
 
 compensation:
-  target_range: "$150K-200K"     # Your target total comp
-  currency: "USD"
-  minimum: "$120K"               # Walk-away number
-  location_flexibility: "Remote preferred, 1 week/month on-site possible"
+  target_range: "$140K-$220K"
+  minimum_acceptable: "$120K"
+  preferred_currency: "USD"
+  notes: "Optimize for total opportunity, realistic comp, and role quality."
 
 location:
   country: "United States"
-  city: "San Francisco"
-  timezone: "PST"
-  visa_status: "No sponsorship needed"
-  # For remote roles outside your country:
-  # onsite_availability: "1 week/month in any city"
+  city: "Austin"
+  timezone: "America/Chicago"
+  visa_status: "Authorized to work"
+  onsite_availability: "Open to selective travel or hybrid if the role is worth it"

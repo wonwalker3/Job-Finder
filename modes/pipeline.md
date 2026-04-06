@@ -1,57 +1,64 @@
-# Modo: pipeline — Inbox de URLs (Second Brain)
+# Mode: pipeline — Pending URL inbox
 
-Procesa URLs de ofertas acumuladas en `data/pipeline.md`. El usuario agrega URLs cuando quiera y luego ejecuta `/career-ops pipeline` para procesarlas todas.
+Use `data/pipeline.md` as an inbox for jobs worth reviewing later.
+
+The user can drop URLs there whenever they want, then ask to process the inbox in one pass.
 
 ## Workflow
 
-1. **Leer** `data/pipeline.md` → buscar items `- [ ]` en la sección "Pendientes"
-2. **Para cada URL pendiente**:
-   a. Calcular siguiente `REPORT_NUM` secuencial (leer `reports/`, tomar el número más alto + 1)
-   b. **Extraer JD** usando Playwright (browser_navigate + browser_snapshot) → WebFetch → WebSearch
-   c. Si la URL no es accesible → marcar como `- [!]` con nota y continuar
-   d. **Ejecutar auto-pipeline completo**: Evaluación A-F → Report .md → PDF (si score >= 3.0) → Tracker
-   e. **Mover de "Pendientes" a "Procesadas"**: `- [x] #NNN | URL | Empresa | Rol | Score/5 | PDF ✅/❌`
-3. **Si hay 3+ URLs pendientes**, lanzar agentes en paralelo (Agent tool con `run_in_background`) para maximizar velocidad.
-4. **Al terminar**, mostrar tabla resumen:
+1. Read `data/pipeline.md`
+2. Find unchecked items in the pending section
+3. For each pending job URL:
+   - determine the next report number
+   - extract the JD from browser/fetch/search fallbacks
+   - run the full evaluation flow
+   - generate a tailored PDF if the role is worth pursuing
+   - write the tracker addition
+   - mark the pipeline item as processed with outcome summary
+4. Return a summary table at the end
 
-```
-| # | Empresa | Rol | Score | PDF | Acción recomendada |
+## Summary format
+
+```text
+| # | Company | Role | Score | PDF | Recommendation |
 ```
 
-## Formato de pipeline.md
+## Suggested pipeline.md format
 
 ```markdown
-## Pendientes
+## Pending
 - [ ] https://jobs.example.com/posting/123
-- [ ] https://boards.greenhouse.io/company/jobs/456 | Company Inc | Senior PM
-- [!] https://private.url/job — Error: login required
+- [ ] https://boards.greenhouse.io/company/jobs/456 | Company Inc | Senior Product Manager
+- [!] https://private.url/job — login required
 
-## Procesadas
-- [x] #143 | https://jobs.example.com/posting/789 | Acme Corp | AI PM | 4.2/5 | PDF ✅
-- [x] #144 | https://boards.greenhouse.io/xyz/jobs/012 | BigCo | SA | 2.1/5 | PDF ❌
+## Processed
+- [x] #143 | https://jobs.example.com/posting/789 | Acme Corp | Product Operations | 4.3/5 | PDF ✅
+- [x] #144 | https://boards.greenhouse.io/xyz/jobs/012 | BigCo | Solutions | 2.8/5 | PDF ❌
 ```
 
-## Detección inteligente de JD desde URL
+## JD extraction strategy
 
-1. **Playwright (preferido):** `browser_navigate` + `browser_snapshot`. Funciona con todas las SPAs.
-2. **WebFetch (fallback):** Para páginas estáticas o cuando Playwright no está disponible.
-3. **WebSearch (último recurso):** Buscar en portales secundarios que indexan el JD.
+Use this order:
+1. browser automation for JS-heavy or SPA pages
+2. static fetch for simpler pages
+3. search fallback if the main page is inaccessible
 
-**Casos especiales:**
-- **LinkedIn**: Puede requerir login → marcar `[!]` y pedir al usuario que pegue el texto
-- **PDF**: Si la URL apunta a un PDF, leerlo directamente con Read tool
-- **`local:` prefix**: Leer el archivo local. Ejemplo: `local:jds/linkedin-pm-ai.md` → leer `jds/linkedin-pm-ai.md`
+Special cases:
+- LinkedIn often requires login → ask for pasted text if extraction fails
+- PDF URLs should be read directly
+- local files may be referenced with `local:` prefixes
 
-## Numeración automática
+## Parallelism note
 
-1. Listar todos los archivos en `reports/`
-2. Extraer el número del prefijo (e.g., `142-medispend...` → 142)
-3. Nuevo número = máximo encontrado + 1
+If processing multiple roles, parallelize only where it does not create browser contention.
+Do not run multiple browser-dependent extraction flows in parallel against a shared browser instance unless the execution environment supports it safely.
 
-## Sincronización de fuentes
+## Sync check
 
-Antes de procesar cualquier URL, verificar sync:
+Before processing a batch of URLs, run:
+
 ```bash
 node cv-sync-check.mjs
 ```
-Si hay desincronización, advertir al usuario antes de continuar.
+
+If the profile / resume setup is incomplete, stop and fix that first.
