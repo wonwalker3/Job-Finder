@@ -91,7 +91,7 @@ This is not the highest-cash role in the universe, but it is one of the cleaner 
 
 - Keep full-cycle selling, negotiation, forecasting, and stakeholder coordination near the top
 - Surface the 100+ agent referral network earlier
-n- Translate home-sales bullets into business outcomes and sales process language
+- Translate home-sales bullets into business outcomes and sales process language
 - Keep CRM discipline visible, especially Salesforce
 
 ### Keyword opportunities
