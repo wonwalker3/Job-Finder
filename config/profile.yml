@@ -1,0 +1,64 @@
+# Job-Finder Candidate Profile — first draft for Kody
+# This is an initial working draft based on known context and should be refined.
+
+candidate:
+  full_name: "Kody Walker"
+  email: ""
+  phone: ""
+  location: "Austin, TX"
+  linkedin: ""
+  portfolio_url: ""
+  github: "github.com/wonwalker3"
+
+search:
+  status: "active"
+  urgency: "high"
+  preferred_regions:
+    - "United States"
+  work_preferences:
+    remote: true
+    hybrid: true
+    onsite: true
+    travel_ok: "selective"
+
+role_targets:
+  primary:
+    - "Applied AI / Automation"
+    - "Technical Product / AI Product"
+    - "Solutions / Implementation"
+  secondary:
+    - "Revenue / Ops Systems"
+    - "Business Operator with Technical Leverage"
+  avoid:
+    - "Pure quota-carrying sales"
+    - "Narrow deep-specialist engineering roles with obvious hard-skill gaps"
+    - "Low-autonomy corporate process roles"
+
+narrative:
+  headline: "Operator-builder using systems, automation, and AI to create leverage"
+  exit_story: "Looking for work where execution, systems thinking, product judgment, and practical AI/automation matter more than theater."
+  differentiators:
+    - "Moves fast and figures things out"
+    - "Comfortable across business, systems, product, and execution"
+    - "Uses automation and AI to simplify messy workflows"
+    - "High-agency operator, not just a planner"
+  proof_points:
+    - name: "Finance Tracker"
+      url: "https://finance.kodywalker.com"
+      hero_metric: "Built and shipped a live working product"
+    - name: "Inventory V5"
+      url: "https://inventory-v5-preview.pages.dev"
+      hero_metric: "Shipped a real inventory system iteration"
+
+compensation:
+  target_range: "$140K-$220K"
+  minimum_acceptable: "$120K"
+  preferred_currency: "USD"
+  notes: "Prefer strong role quality, leverage, and believable upside over empty title inflation."
+
+location:
+  country: "United States"
+  city: "Austin"
+  timezone: "America/Chicago"
+  visa_status: "Authorized to work"
+  onsite_availability: "Open to selective hybrid / travel if the role is worth it"
