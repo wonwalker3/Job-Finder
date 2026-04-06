@@ -30,6 +30,7 @@ title_filter:
     - "Partnerships"
     - "Business Development"
     - "Product Specialist"
+    - "Customer Success"
     - "AI"
     - "Automation"
     - "Applied AI"
@@ -97,6 +98,10 @@ search_queries:
 
   - name: Austin / Texas SaaS AEs
     query: '(Austin OR Texas) ("Account Executive" OR "Mid-Market" OR "Enterprise Account Executive") SaaS'
+    enabled: true
+
+  - name: Austin hybrid commercial tech roles
+    query: '(Austin OR Round Rock) ("Account Executive" OR Solutions OR Implementation OR Partnerships) (software OR platform OR AI)'
     enabled: true
 
 tracked_companies:
@@ -170,6 +175,60 @@ tracked_companies:
     scan_query: 'site:jobs.ashbyhq.com/n8n "Account Executive" OR "Partnerships" OR "Solutions"'
     enabled: true
 
+  - name: Rippling
+    tier: 1
+    careers_url: https://www.rippling.com/careers/open-roles
+    scan_method: websearch
+    scan_query: 'site:rippling.com/careers/open-roles "Account Executive" OR "Implementation" OR "Solutions"'
+    enabled: true
+
+  - name: Ramp
+    tier: 1
+    careers_url: https://jobs.ashbyhq.com/ramp
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/ramp "Account Executive" OR "Partnerships" OR "Solutions"'
+    enabled: true
+
+  - name: Deel
+    tier: 1
+    careers_url: https://jobs.ashbyhq.com/deel
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/deel "Account Executive" OR "Implementation" OR "Solutions"'
+    enabled: true
+
+  - name: Notion
+    tier: 1
+    careers_url: https://www.notion.so/careers
+    scan_method: websearch
+    scan_query: 'site:notion.so/careers "Account Executive" OR "Commercial" OR "Solutions"'
+    enabled: true
+
+  - name: Glean
+    tier: 1
+    careers_url: https://job-boards.greenhouse.io/gleanwork
+    api: https://boards-api.greenhouse.io/v1/boards/gleanwork/jobs
+    enabled: true
+
+  - name: Webflow
+    tier: 1
+    careers_url: https://webflow.com/careers
+    scan_method: websearch
+    scan_query: 'site:webflow.com/careers "Account Executive" OR "Sales" OR "Solutions"'
+    enabled: true
+
+  - name: OpenAI
+    tier: 1
+    careers_url: https://openai.com/careers
+    scan_method: websearch
+    scan_query: 'site:openai.com/careers "commercial" OR "partnerships" OR "solutions" OR "go to market"'
+    enabled: true
+
+  - name: Anthropic
+    tier: 1
+    careers_url: https://job-boards.greenhouse.io/anthropic
+    api: https://boards-api.greenhouse.io/v1/boards/anthropic/jobs
+    enabled: true
+
   # Tier 2 — Austin / Texas realistic targets
   - name: Salesforce
     tier: 2
@@ -183,34 +242,6 @@ tracked_companies:
     careers_url: https://www.twilio.com/en-us/company/jobs
     scan_method: websearch
     scan_query: 'site:twilio.com/company/jobs Austin OR Texas "Account Executive" OR "Solutions" OR "AI"'
-    enabled: true
-
-  - name: Rippling
-    tier: 2
-    careers_url: https://www.rippling.com/careers/open-roles
-    scan_method: websearch
-    scan_query: 'site:rippling.com/careers/open-roles Austin OR Texas "Account Executive" OR "Implementation" OR "Solutions"'
-    enabled: true
-
-  - name: Ramp
-    tier: 2
-    careers_url: https://jobs.ashbyhq.com/ramp
-    scan_method: websearch
-    scan_query: 'site:jobs.ashbyhq.com/ramp Austin OR Texas "Account Executive" OR "Partnerships" OR "Solutions"'
-    enabled: true
-
-  - name: Deel
-    tier: 2
-    careers_url: https://jobs.ashbyhq.com/deel
-    scan_method: websearch
-    scan_query: 'site:jobs.ashbyhq.com/deel Austin OR Texas "Account Executive" OR "Implementation" OR "Solutions"'
-    enabled: true
-
-  - name: Notion
-    tier: 2
-    careers_url: https://www.notion.so/careers
-    scan_method: websearch
-    scan_query: 'site:notion.so/careers Austin OR Texas "Account Executive" OR "Commercial" OR "Solutions"'
     enabled: true
 
   - name: NinjaOne
@@ -283,26 +314,70 @@ tracked_companies:
     scan_query: 'site:files.com/jobs Austin OR Texas "Account Executive" OR "Sales"'
     enabled: true
 
-  # Tier 3 — remote national targets
-  - name: OpenAI
-    tier: 3
-    careers_url: https://openai.com/careers
+  - name: Oracle
+    tier: 2
+    careers_url: https://careers.oracle.com/
     scan_method: websearch
-    scan_query: 'site:openai.com/careers "commercial" OR "partnerships" OR "solutions" OR "go to market"'
+    scan_query: 'site:careers.oracle.com Austin OR Texas "Account Executive" OR "Applications Sales" OR "Cloud"'
     enabled: true
 
-  - name: Anthropic
-    tier: 3
-    careers_url: https://job-boards.greenhouse.io/anthropic
-    api: https://boards-api.greenhouse.io/v1/boards/anthropic/jobs
+  - name: Dell
+    tier: 2
+    careers_url: https://jobs.dell.com/
+    scan_method: websearch
+    scan_query: 'site:jobs.dell.com Round Rock OR Austin "Account Executive" OR "Sales" OR "Business Development"'
     enabled: true
 
-  - name: Glean
-    tier: 3
-    careers_url: https://job-boards.greenhouse.io/gleanwork
-    api: https://boards-api.greenhouse.io/v1/boards/gleanwork/jobs
+  - name: Google Cloud
+    tier: 2
+    careers_url: https://www.google.com/about/careers/applications/jobs/results/
+    scan_method: websearch
+    scan_query: 'site:google.com/about/careers/applications/jobs/results Austin OR Texas "Account Executive" OR "Sales" OR "Customer Engineer"'
     enabled: true
 
+  - name: Postman
+    tier: 2
+    careers_url: https://www.postman.com/company/careers/
+    scan_method: websearch
+    scan_query: 'site:postman.com/company/careers Austin OR Texas "Account Executive" OR "Commercial" OR "Solutions"'
+    enabled: true
+
+  - name: Braze
+    tier: 2
+    careers_url: https://www.braze.com/company/careers
+    scan_method: websearch
+    scan_query: 'site:braze.com/company/careers Austin OR Texas "Account Executive" OR "Commercial"'
+    enabled: true
+
+  - name: Qualtrics
+    tier: 2
+    careers_url: https://www.qualtrics.com/careers/us/en
+    scan_method: websearch
+    scan_query: 'site:qualtrics.com/careers Austin OR Texas "Account Executive" OR "Sales" OR "Solutions"'
+    enabled: true
+
+  - name: Udemy
+    tier: 2
+    careers_url: https://about.udemy.com/careers/
+    scan_method: websearch
+    scan_query: 'site:about.udemy.com/careers Austin OR Texas "Account Executive" OR "Commercial"'
+    enabled: true
+
+  - name: Buildkite
+    tier: 2
+    careers_url: https://buildkite.com/careers
+    scan_method: websearch
+    scan_query: 'site:buildkite.com/careers Austin OR Texas "Account Executive" OR "Partnerships" OR "Solutions"'
+    enabled: true
+
+  - name: Deepgram
+    tier: 2
+    careers_url: https://deepgram.com/company/careers
+    scan_method: websearch
+    scan_query: 'site:deepgram.com/company/careers Austin OR Texas "Account Executive" OR "Strategic" OR "AI"'
+    enabled: true
+
+  # Tier 3 — remote national targets
   - name: Vercel
     tier: 3
     careers_url: https://job-boards.greenhouse.io/vercel
@@ -344,9 +419,79 @@ tracked_companies:
     scan_query: 'site:asana.com/jobs/all "Account Executive" OR "Solutions"'
     enabled: true
 
-  - name: Webflow
+  - name: Monday.com
     tier: 3
-    careers_url: https://webflow.com/careers
+    careers_url: https://monday.com/careers
     scan_method: websearch
-    scan_query: 'site:webflow.com/careers "Account Executive" OR "Sales" OR "Solutions"'
+    scan_query: 'site:monday.com/careers "Account Executive" OR "Commercial" OR "Solutions"'
+    enabled: true
+
+  - name: Atlassian
+    tier: 3
+    careers_url: https://www.atlassian.com/company/careers/all-jobs
+    scan_method: websearch
+    scan_query: 'site:atlassian.com/company/careers/all-jobs "Account Executive" OR "Commercial" OR "Solutions"'
+    enabled: true
+
+  - name: Miro
+    tier: 3
+    careers_url: https://miro.com/careers/open-positions/
+    scan_method: websearch
+    scan_query: 'site:miro.com/careers/open-positions "Account Executive" OR "Solutions"'
+    enabled: true
+
+  - name: ClickUp
+    tier: 3
+    careers_url: https://clickup.com/careers
+    scan_method: websearch
+    scan_query: 'site:clickup.com/careers "Account Executive" OR "Commercial" OR "Partnerships"'
+    enabled: true
+
+  - name: Figma
+    tier: 3
+    careers_url: https://www.figma.com/careers/
+    scan_method: websearch
+    scan_query: 'site:figma.com/careers "Account Executive" OR "Commercial" OR "Solutions"'
+    enabled: true
+
+  - name: Mural
+    tier: 3
+    careers_url: https://www.mural.co/careers
+    scan_method: websearch
+    scan_query: 'site:mural.co/careers "Account Executive" OR "Commercial" OR "Solutions"'
+    enabled: true
+
+  - name: 1Password
+    tier: 3
+    careers_url: https://jobs.ashbyhq.com/1password
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/1password "Account Executive" OR "Commercial" OR "Solutions"'
+    enabled: true
+
+  - name: Okta
+    tier: 3
+    careers_url: https://www.okta.com/company/careers/
+    scan_method: websearch
+    scan_query: 'site:okta.com/company/careers "Account Executive" OR "Commercial" OR "Solutions"'
+    enabled: true
+
+  - name: Datadog
+    tier: 3
+    careers_url: https://careers.datadoghq.com/
+    scan_method: websearch
+    scan_query: 'site:careers.datadoghq.com "Account Executive" OR "Commercial" OR "Sales"'
+    enabled: true
+
+  - name: Snowflake
+    tier: 3
+    careers_url: https://careers.snowflake.com/us/en
+    scan_method: websearch
+    scan_query: 'site:careers.snowflake.com/us/en "Account Executive" OR "Commercial" OR "Solutions"'
+    enabled: true
+
+  - name: MongoDB
+    tier: 3
+    careers_url: https://www.mongodb.com/company/careers
+    scan_method: websearch
+    scan_query: 'site:mongodb.com/company/careers "Account Executive" OR "Commercial" OR "Solutions"'
     enabled: true
